@@ -1,1 +1,0 @@
-# android_device_micromax_q380
