@@ -1,11 +1,15 @@
 # Release name
 PRODUCT_RELEASE_NAME := q380
 
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/micromax/q380/device_q380.mk)
+$(call inherit-product-if-exists, vendor/micromax/q380/q380-vendor.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 960
@@ -18,5 +22,5 @@ PRODUCT_BRAND := micromax
 PRODUCT_MODEL := q380
 PRODUCT_MANUFACTURER := micromax
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+PRODUCT_GMS_CLIENTID_BASE := android-mediatek
+
