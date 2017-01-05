@@ -98,9 +98,16 @@ TW_INTERNAL_STORAGE_MOUNT_POINT := "emmc"
 TW_EXTERNAL_STORAGE_PATH := "/sdcard"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 TW_DEFAULT_EXTERNAL_STORAGE := true
+TW_INCLUDE_JB_CRYPTO := true
+TW_CRYPTO_FS_TYPE := "ext4"
+TW_CRYPTO_REAL_BLKDEV := "/dev/block/mmcblk0p8"
+TW_CRYPTO_MNT_POINT := "/data"
+TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered"
 BOARD_HAS_LARGE_FILESYSTEM := true
 DEVICE_SCREEN_WIDTH := 540
 DEVICE_SCREEN_HEIGHT := 960
+TARGET_SCREEN_WIDTH := 540
+TARGET_SCREEN_HEIGHT := 960
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
 DEVICE_RESOLUTION := 540×960
@@ -127,3 +134,10 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 TARGET_USERIMAGES_USE_EXT4:=true
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
+
+# Enable Minikin text layout engine (will be the default soon)
+USE_MINIKIN := true
+
+# Hack for build
+$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
+
