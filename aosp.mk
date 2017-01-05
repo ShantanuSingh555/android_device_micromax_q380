@@ -6,7 +6,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/micromax/q380/device_q380.mk)
-$(call inherit-product-if-exists, vendor/micromax/q380/q380-vendor.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 960
