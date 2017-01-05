@@ -1,7 +1,7 @@
 LOCAL_PATH := device/micromax/q380
 
 # inherit from the proprietary version
--include vendor/micromax/q380/BoardConfigVendor.mk
+-include vendor/micromax/q380/q380-vendor.mk
 
 # GPS
 TARGET_SPECIFIC_HEADER_PATH := device/micromax/q380/include
