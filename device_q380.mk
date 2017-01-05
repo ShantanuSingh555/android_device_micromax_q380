@@ -144,7 +144,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.sys.media.use-awesome=true
 $(call inherit-product, build/target/product/full.mk)
-
-PRODUCT_NAME := full_q380
-PRODUCT_DEVICE := q380
-
