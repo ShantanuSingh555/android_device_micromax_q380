@@ -66,6 +66,8 @@ debug.hwui.render_dirty_regions=false
 
 # workaround to set correct density
 ro.sf.lcd_density=240
+persist.sys.lcd_density=240
+ro.slim.lcd_density=240
 
 service.adb.root=1
 persist.mtk.aee.aed=on
