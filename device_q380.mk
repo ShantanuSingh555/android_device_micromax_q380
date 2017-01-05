@@ -1,3 +1,5 @@
+$(call inherit-product-if-exists, vendor/micromax/q380/q380-vendor.mk)
+
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
